@@ -19,4 +19,9 @@ describe('Triangle', () => {
     expect(scalTriangle.checkType()).toEqual("scalene triangle");
   });
 
+  test('should correctly determine whether two sides are equal but not all three', () => {
+    const isoTriangle = new Triangle(6, 6, 7)
+    expect(isoTriangle.checkType()).toEqual('isosceles triangle');
+  });
+
 });
